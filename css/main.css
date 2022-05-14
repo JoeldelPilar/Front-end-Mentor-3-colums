@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+	/*Primary colors */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	/*Neutral colors*/
+	--transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+	--very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	min-width: 375px;
+	margin: auto;
+	margin-top: 5em;
+	padding: 2em;
+	font-family: "Lexend Deca", sans-serif;
+}
+
+.corner-styler {
+	border-radius: 2rem;
+}
+
+img {
+	padding: 2rem;
+}
+
+h2 {
+	font-family: "Big Shoulders Display", sans-serif;
+	color: var(--very-light-gray);
+	font-size: 2.5rem;
+	margin-left: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+p {
+	color: var(--transparent-white);
+	margin-left: 2rem;
+	margin-bottom: 5rem;
+	text-transform: 12ch;
+	line-height: 1.75rem;
+}
+
+.sedans {
+	background-color: var(--bright-orange);
+	border-top-left-radius: 0.625rem;
+	border-top-right-radius: 0.625rem;
+	min-width: 375;
+}
+
+.suvs {
+	background-color: var(--dark-cyan);
+	min-width: 375;
+}
+
+.luxury {
+	background-color: var(--very-dark-cyan);
+	border-bottom-left-radius: 0.625rem;
+	border-bottom-right-radius: 0.625rem;
+	min-width: 375;
+}
+
+button {
+	margin-left: 2rem;
+	margin-bottom: 3rem;
+	padding: 1rem;
+	width: 50%;
+	border: 2px solid var(--very-light-gray);
+	border-radius: 5rem;
+	font-family: "Lexend Deca", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+	background-color: transparent;
+	color: var(--very-light-gray);
+}
+
+.sedans-button {
+	color: var(--bright-orange);
+}
+
+.suvs-button {
+	color: var(--dark-cyan);
+}
+
+.luxury-button {
+	color: var(--very-dark-cyan);
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 2rem;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 40em) {
+	.main-container {
+		grid-template-columns: repeat(5, 1fr);
+		max-width: 1440px;
+	}
+
+	.sedans {
+		grid-column-start: 2;
+		border-top-right-radius: 0rem;
+		border-bottom-left-radius: 0.625rem;
+	}
+
+	.luxury {
+		border-bottom-left-radius: 0rem;
+		border-top-right-radius: 0.625rem;
+	}
+}
